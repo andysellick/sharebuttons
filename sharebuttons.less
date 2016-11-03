@@ -17,10 +17,15 @@
 		top:0;
 		right:0;
 		height:100%;
+
 		.sharingbuttons {
+			display:none;
 			position: relative;
 			top: 50%;
 			.transform( translateY(-50%) );
+			&.loaded {
+				display:block;
+			}
 			a {
 				display:block;
 				overflow:hidden;

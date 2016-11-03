@@ -26,6 +26,7 @@ Include the CSS file on your page and add the following code on your page (or co
             var link = escape(window.location.href);
             txt = txt.replace(/SBLINK/gi,link);
             el.innerHTML = txt;
+            el.className += ' loaded';
 		};
 	</script>
 	<div class="sharebuttons">
