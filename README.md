@@ -6,7 +6,7 @@ Quick bit of code to add self-populating share buttons to your website with mini
 Usage
 -----
 
-Include the CSS file on your page and add the following code before the closing body tag (or copy it from the included index.html)
+Include the CSS file on your page and add the following code on your page (or copy it from the included index.html):
 
 ```html
 	<script>
@@ -46,7 +46,7 @@ About
 
 This code gets the URL the page is on, extracts content from the page metadata, and populates the buttons automatically on page load.
 
-This will add some social media buttons to as fixed elements to the right hand side of your page. On mobile they drop down to appear in their position in the markup, as a centered row of buttons.
+It adds social media sharing buttons as fixed elements to the right hand side of your page. On mobile they drop down to appear in their position in the markup, as a centered row of buttons.
 
 Written as a lightweight alternative to all the massively bloated plugins that claim to do this for you. Has no external dependencies. Link code based on examples from: http://www.sharelinkgenerator.com/
 
