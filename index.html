@@ -31,7 +31,7 @@
 		window.onload = function(){
             var el = document.getElementById('sharelinks');
             var desc = getMetaContentByName('description','name');
-            txt = el.innerHTML.replace(/SBDESC/gi,desc);
+            var txt = el.innerHTML.replace(/SBDESC/gi,desc);
             var title = getMetaContentByName('og:title','property');
 			txt = txt.replace(/SBTITLE/gi,title);
 			var img = getMetaContentByName('og:image','property');
