@@ -35,7 +35,7 @@
             var title = getMetaContentByName('og:title','property');
 			txt = txt.replace(/SBTITLE/gi,title);
 			var img = getMetaContentByName('og:image','property');
-			txt = txt.replace(/SBIMG/gi,title);
+			txt = txt.replace(/SBIMG/gi,img);
             var link = escape(window.location.href);
             txt = txt.replace(/SBLINK/gi,link);
             el.innerHTML = txt;
