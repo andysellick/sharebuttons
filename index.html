@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Share buttons</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="sharebuttons.css"/>
+	<title>Share buttons</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="sharebuttons.css"/>
 
 	<meta name="description" content="This is the description of this page">
-    <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@FIXME">
 	<meta name="twitter:title" content="This is the title of this page">
 	<meta name="twitter:description" content="FIXME">
@@ -24,22 +24,22 @@
 <body>
 	<script>
 		function getMetaContentByName(name,attrtype,content){
-		   var content = (content==null)?'content':content;
-		   var ret = document.querySelector("meta["+attrtype+"='"+name+"']").getAttribute(content);
-		   return ret.replace(/ /gi,'%20');
+			var content = (content==null)?'content':content;
+			var ret = document.querySelector("meta["+attrtype+"='"+name+"']").getAttribute(content);
+			return ret.replace(/ /gi,'%20');
 		}
 		window.onload = function(){
-            var el = document.getElementById('sharelinks');
-            var desc = getMetaContentByName('description','name');
-            var txt = el.innerHTML.replace(/SBDESC/gi,desc);
-            var title = getMetaContentByName('og:title','property');
+			var el = document.getElementById('sharelinks');
+			var desc = getMetaContentByName('description','name');
+			var txt = el.innerHTML.replace(/SBDESC/gi,desc);
+			var title = getMetaContentByName('og:title','property');
 			txt = txt.replace(/SBTITLE/gi,title);
 			var img = getMetaContentByName('og:image','property');
 			txt = txt.replace(/SBIMG/gi,img);
-            var link = escape(window.location.href);
-            txt = txt.replace(/SBLINK/gi,link);
-            el.innerHTML = txt;
-            el.className += ' loaded';
+			var link = escape(window.location.href);
+			txt = txt.replace(/SBLINK/gi,link);
+			el.innerHTML = txt;
+			el.className += ' loaded';
 		};
 	</script>
 
@@ -52,7 +52,5 @@
 			<a href="https://www.linkedin.com/shareArticle?mini=true&url=SBLINK&title=SBTITLE&summary=SBDESC&source=" class="li" target="_blank">Share on LinkedIn</a>
 		</div>
 	</div>
-
-
 </body>
 </html>
